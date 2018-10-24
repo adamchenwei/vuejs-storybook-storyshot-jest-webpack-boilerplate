@@ -8,5 +8,13 @@ module.exports = {
   ],
   plugins: [
     'vue'
-  ]
+  ],
+  env: {
+    browser: true,
+    node: true,
+    mocha: true
+  },
+  globals: {
+    expect: true
+  },
 }
