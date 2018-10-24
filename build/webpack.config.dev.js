@@ -1,7 +1,7 @@
 'use strict'
-const webpack = require('webpack');
-const { VueLoaderPlugin } = require('vue-loader');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack')
+const { VueLoaderPlugin } = require('vue-loader')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -20,7 +20,12 @@ module.exports = {
         test: /\.vue$/,
         use: 'vue-loader'
       },
-      //IMPORTANT: All js load should come AFTER vue-loader!!!
+      // IMPORTANT: All js load should come AFTER vue-loader!!!
+      {
+        test: /\.(js|vue)$/,
+        use: 'eslint-loader',
+        enforce: 'pre' // kick in before other loader... Q: also before vue-loader I suppose? maybe better move it to top?
+      },
       {
         test: /\.css$/,
         use: [
@@ -31,15 +36,15 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-            "style-loader", // creates style nodes from JS strings
-            "css-loader", // translates CSS into CommonJS
-            "sass-loader" // compiles Sass to CSS, using Node Sass by default
+          'style-loader', // creates style nodes from JS strings
+          'css-loader', // translates CSS into CommonJS
+          'sass-loader' // compiles Sass to CSS, using Node Sass by default
         ]
       },
       {
         test: /\.js$/,
         use: 'babel-loader'
-      },
+      }
     ]
   },
   plugins: [
