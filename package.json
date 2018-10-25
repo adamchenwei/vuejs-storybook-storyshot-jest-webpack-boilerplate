@@ -22,9 +22,12 @@
     },
     "transform": {
       "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
-      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest",
+      ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue-preprocessor",
       ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
     },
+    "transformIgnorePatterns": [
+      "/node_modules/(?!(@storybook/.*\\.vue$))"
+    ],
     "snapshotSerializers": [
       "<rootDir>/node_modules/jest-serializer-vue"
     ]
@@ -50,6 +53,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
+    "@storybook/addon-storyshots": "^3.4.11",
     "@storybook/vue": "^4.0.0-alpha.25",
     "@vue/test-utils": "^1.0.0-beta.25",
     "babel-core": "^6.26.3",
@@ -72,6 +76,7 @@
     "jest": "^23.6.0",
     "jest-serializer-vue": "^2.0.2",
     "jest-transform-stub": "^1.0.0",
+    "jest-vue-preprocessor": "^1.4.0",
     "node-sass": "^4.9.4",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",

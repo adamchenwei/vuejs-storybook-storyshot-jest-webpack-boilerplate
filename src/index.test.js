@@ -1,7 +1,7 @@
-// import { mount, createLocalVue } from '@vue/test-utils'
-// import App from '../components/App/App.vue'
+import initStoryshots from '@storybook/addon-storyshots'
 
-test('App runs', () => {
+initStoryshots()
+test('HelloComponent', () => {
   // const vue = createLocalVue()
   // const app = mount(App, { vue })
 
