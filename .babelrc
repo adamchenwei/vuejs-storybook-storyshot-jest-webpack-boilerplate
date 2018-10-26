@@ -12,7 +12,8 @@
     "test": {
       "presets": [
         ["env", { "targets": { "node": "current" }}]
-      ]
+      ],
+      "plugins": ["require-context-hook"]
     }
   }
 }
