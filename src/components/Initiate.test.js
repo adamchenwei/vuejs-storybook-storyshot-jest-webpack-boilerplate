@@ -1,8 +1,8 @@
 // import App from '../components/App/App.vue'
 import App from '../components/App/App.vue'
 
-// import initStoryshots from '@storybook/addon-storyshots'
-// initStoryshots()
+import initStoryshots from '@storybook/addon-storyshots'
+initStoryshots()
 console.log(App)
 test('INDEX', () => {
   debugger
