@@ -8,10 +8,15 @@ Initially, I chose (presumably) the easiest way to start - start the Vue setup f
 Good point! That's the branches in this repo are for! Look into the branches, you will see something like `step/xxxx` within each `step` branch, there are commits that document the change and referencing articles, github issues and etc that I took my work and learned from. So you can learn from it too and start from whichever step you'd like to learn from! Freedom!
 
 # Q: How can I start play with the app?
+
 `npm run setup` for initial install and reinstall with clean up
+
 `npm run storybook` for running our storybook
+
 `npm run test` for running jest test with snapshot generation with storshot!
+
 `npm run dev` start developing
+
 `npm run build` build the final dist
 
 # Q: Whats next?
