@@ -1,11 +1,10 @@
 // import App from '../components/App/App.vue'
-import App from '../components/App/App.vue'
-
 import initStoryshots from '@storybook/addon-storyshots'
+import App from '../components/App/App.vue'
 initStoryshots()
 console.log(App)
+
 test('INDEX', () => {
-  debugger
   console.log('haha')
 
   // const vue = createLocalVue()
