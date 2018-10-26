@@ -6,6 +6,7 @@
 <script>
 import HelloComponent from '../HelloComponent/HelloComponent.vue'
 export default {
+  name: 'App',
   components: {
     HelloComponent
   }

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config build/webpack.config.dev.js",
-    "test": "jest",
+    "test": "NODE_ENV=test jest",
     "dev": "webpack-dev-server --config build/webpack.config.dev.js",
     "lint": "eslint --ext .js,.vue src",
     "lint:fix": "eslint --ext .js,.vue src --fix",
@@ -13,6 +13,7 @@
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "jest": {
+    "verbose": true,
     "moduleFileExtensions": [
       "js",
       "vue"
@@ -26,7 +27,7 @@
       ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
     },
     "transformIgnorePatterns": [
-      "/node_modules/(?!(@storybook/.*\\.vue$))"
+      "<rootDir>/node_modules/(?!(@storybook/.*\\.vue$))"
     ],
     "snapshotSerializers": [
       "<rootDir>/node_modules/jest-serializer-vue"
@@ -53,10 +54,12 @@
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
     "@storybook/addon-storyshots": "^3.4.11",
     "@storybook/vue": "^4.0.0-alpha.25",
+    "@vue/babel-preset-app": "^3.0.5",
     "@vue/test-utils": "^1.0.0-beta.25",
-    "babel-core": "^6.26.3",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",

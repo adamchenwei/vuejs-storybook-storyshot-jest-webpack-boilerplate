@@ -4,7 +4,7 @@
 test('HelloComponent', () => {
   // const vue = createLocalVue()
   // const app = mount(App, { vue })
-
   // expect(app.classes()).toContain('center-content')
+  // debugger
   expect(1).toEqual(1)
 })
