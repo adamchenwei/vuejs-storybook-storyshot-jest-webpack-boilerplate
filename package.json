@@ -14,7 +14,9 @@
   },
   "jest": {
     "verbose": true,
-    "setupFiles": ["<rootDir>/build/jest/register-context.js"],
+    "setupFiles": [
+      "<rootDir>/build/jest/register-context.js"
+    ],
     "moduleFileExtensions": [
       "js",
       "vue",
@@ -58,7 +60,8 @@
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
-    "@storybook/addon-storyshots": "^4.0.0-rc.6",
+    "@storybook/addon-storyshots": "^4.0.2",
+    "@storybook/addon-storyshots-puppeteer": "^4.0.2",
     "@storybook/vue": "^4.0.0-rc.6",
     "@vue/babel-preset-app": "^3.0.5",
     "@vue/test-utils": "^1.0.0-beta.25",

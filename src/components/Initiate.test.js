@@ -1,7 +1,10 @@
 // import App from '../components/App/App.vue'
-import initStoryshots from '@storybook/addon-storyshots'
+import initStoryshots from '@storybook/addon-storyshots';
+import { imageSnapshot } from '@storybook/addon-storyshots-puppeteer'
 import App from '../components/App/App.vue'
-initStoryshots()
+
+initStoryshots({ suite: 'Image storyshots', test: imageSnapshot() })
+
 console.log(App)
 
 test('INDEX', () => {
