@@ -1,0 +1,12 @@
+# testing
+- snapshot
+  - jpg
+  - svg
+  - animation
+  - event
+  - callback
+  - change detection
+- jest
+  - event
+  - callback
+  - mock
