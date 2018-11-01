@@ -6,5 +6,5 @@ storiesOf('HelloComponent', module)
   // .add('story as a template', () => '<HelloComponent name="Adam" />')
   .add('story as a component', () => ({
     components: { HelloComponent },
-    template: '<HelloComponent name="Adam"/>'
+    template: '<HelloComponent name="Eve"/>'
   }))

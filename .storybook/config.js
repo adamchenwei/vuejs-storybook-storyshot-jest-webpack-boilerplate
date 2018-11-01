@@ -1,6 +1,9 @@
-import { configure } from '@storybook/vue';
+import { configure, getStorybook, setAddon } from '@storybook/vue';
 
 import Vue from 'vue';
+import createPercyAddon from '@percy-io/percy-storybook';
+const { percyAddon, serializeStories } = createPercyAddon();
+setAddon(percyAddon);
 // import Vuex from 'vuex'; // Vue plugins
 
 // Import your custom components.
@@ -31,3 +34,4 @@ function loadStories() {
 }
 
 configure(loadStories, module);
+serializeStories(getStorybook);

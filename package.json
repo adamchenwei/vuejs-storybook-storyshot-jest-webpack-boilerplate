@@ -10,11 +10,14 @@
     "lint": "eslint --ext .js,.vue src",
     "lint:fix": "eslint --ext .js,.vue src --fix",
     "setup": "rm -rf ./node_modules/ && npm cache verify && npm install",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "snapshot": "build-storybook && percy-storybook --widths=320,1280"
   },
   "jest": {
     "verbose": true,
-    "setupFiles": ["<rootDir>/build/jest/register-context.js"],
+    "setupFiles": [
+      "<rootDir>/build/jest/register-context.js"
+    ],
     "moduleFileExtensions": [
       "js",
       "vue",
@@ -58,6 +61,7 @@
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
+    "@percy-io/percy-storybook": "^2.1.0",
     "@storybook/addon-storyshots": "^4.0.0-rc.6",
     "@storybook/vue": "^4.0.0-rc.6",
     "@vue/babel-preset-app": "^3.0.5",
