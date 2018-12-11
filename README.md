@@ -1,4 +1,7 @@
 # vuejs-storybook-storyshot-jest-webpack-boilerplate
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/adamchenwei/vuejs-storybook-storyshot-jest-webpack-boilerplate.svg)](https://greenkeeper.io/)
+
 Boilerplate for someone wants a clean start at any point for building a VueJS web application in combine with storybook, storyshot, jest, webpakc, and other accessories that may come later!
 
 # Q: Why another Vue boilerplate?
